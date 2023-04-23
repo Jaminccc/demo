@@ -1,0 +1,38 @@
+$img: "./images/1.jpg", "./images/2.jpg", "./images/3.jpg", "./images/4.jpg", "./images/5.jpg", "./images/6.jpg", "./images/7.jpg";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+.Accordion {
+  width: 100%;
+  max-width: 1080px;
+  height: 250px;
+  // 溢出隐藏
+  overflow: hidden;
+  ul{
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    margin: 0;
+    padding: 0;
+
+  }
+
+  li{
+    // 设置图片横向
+    display: table-cell;
+    // 展示图片
+    @each $c in $img{
+      $i:index($img,$c);
+      &:nth-child(#{$i}){
+        background-image: url($c);
+      }
+    }
+  }
+}

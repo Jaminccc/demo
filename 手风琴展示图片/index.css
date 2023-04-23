@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+.Accordion {
+  width: 100%;
+  max-width: 1080px;
+  height: 250px;
+  overflow: hidden;
+}
+.Accordion ul {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  margin: 0;
+  padding: 0;
+}
+.Accordion li {
+  display: table-cell;
+}
+.Accordion li:nth-child(1) {
+  background-image: url("./images/1.jpg");
+}
+.Accordion li:nth-child(2) {
+  background-image: url("./images/2.jpg");
+}
+.Accordion li:nth-child(3) {
+  background-image: url("./images/3.jpg");
+}
+.Accordion li:nth-child(4) {
+  background-image: url("./images/4.jpg");
+}
+.Accordion li:nth-child(5) {
+  background-image: url("./images/5.jpg");
+}
+.Accordion li:nth-child(6) {
+  background-image: url("./images/6.jpg");
+}
+.Accordion li:nth-child(7) {
+  background-image: url("./images/7.jpg");
+}
+
+/*# sourceMappingURL=index.css.map */
