@@ -10,27 +10,44 @@ h1 {
 }
 
 .Accordion {
-  width: 100%;
+  width: 85%;
   max-width: 1080px;
   height: 250px;
+  margin: 50px auto;
   // 溢出隐藏
   overflow: hidden;
-  ul{
+
+
+  ul {
     width: 100%;
     display: table;
     table-layout: fixed;
     margin: 0;
     padding: 0;
 
+    // 当鼠标移至某一li时 其他li的宽度
+    &:hover li,
+    &:focus-within li {
+      width: 12%;
+    }
+
+    // 当鼠标移至li时 li的宽度
+    & li:focus,
+    &:hover li:hover,
+    &:focus-within li:focus {
+      width: 72%;
+    }
+
   }
 
-  li{
+  li {
     // 设置图片横向
     display: table-cell;
+
     // 展示图片
-    @each $c in $img{
-      $i:index($img,$c);
-      &:nth-child(#{$i}){
+    @each $c in $img {
+      $i: index($img, $c);
+      &:nth-child(#{$i}) {
         background-image: url($c);
       }
     }
