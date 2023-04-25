@@ -43,12 +43,28 @@ h1 {
   li {
     // 设置图片横向
     display: table-cell;
-
+    height: 250px;
+    background: center center;
     // 展示图片
     @each $c in $img {
       $i: index($img, $c);
       &:nth-child(#{$i}) {
         background-image: url($c);
+      }
+    }
+
+    div {
+      display: block;
+      overflow: hidden;
+      width: 100%;
+
+      a {
+        display: block;
+        // 设定在元素的指定高度内设定其他值 如下就是只在250高度下做操作
+        box-sizing: border-box;
+        height: 250px;
+        padding: 10px 15px;
+
       }
     }
   }

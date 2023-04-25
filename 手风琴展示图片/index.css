@@ -29,6 +29,8 @@ h1 {
 }
 .Accordion li {
   display: table-cell;
+  height: 250px;
+  background: center center;
 }
 .Accordion li:nth-child(1) {
   background-image: url("./images/1.jpg");
@@ -50,6 +52,17 @@ h1 {
 }
 .Accordion li:nth-child(7) {
   background-image: url("./images/7.jpg");
+}
+.Accordion li div {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+.Accordion li div a {
+  display: block;
+  box-sizing: border-box;
+  height: 250px;
+  padding: 10px 15px;
 }
 
 /*# sourceMappingURL=index.css.map */
