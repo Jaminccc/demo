@@ -10,7 +10,7 @@ h1 {
 .Accordion {
   width: 85%;
   max-width: 1080px;
-  height: 250px;
+  height: 550px;
   margin: 50px auto;
   overflow: hidden;
 }
@@ -22,47 +22,75 @@ h1 {
   padding: 0;
 }
 .Accordion ul:hover li, .Accordion ul:focus-within li {
-  width: 12%;
+  width: 6%;
 }
 .Accordion ul li:focus, .Accordion ul:hover li:hover, .Accordion ul:focus-within li:focus {
   width: 72%;
 }
-.Accordion li {
+.Accordion ul li {
   display: table-cell;
-  height: 250px;
+  height: 550px;
   background: center center;
+  vertical-align: bottom;
+  position: relative;
 }
-.Accordion li:nth-child(1) {
+.Accordion ul li:nth-child(1) {
   background-image: url("./images/1.jpg");
 }
-.Accordion li:nth-child(2) {
+.Accordion ul li:nth-child(2) {
   background-image: url("./images/2.jpg");
 }
-.Accordion li:nth-child(3) {
+.Accordion ul li:nth-child(3) {
   background-image: url("./images/3.jpg");
 }
-.Accordion li:nth-child(4) {
+.Accordion ul li:nth-child(4) {
   background-image: url("./images/4.jpg");
 }
-.Accordion li:nth-child(5) {
+.Accordion ul li:nth-child(5) {
   background-image: url("./images/5.jpg");
 }
-.Accordion li:nth-child(6) {
+.Accordion ul li:nth-child(6) {
   background-image: url("./images/6.jpg");
 }
-.Accordion li:nth-child(7) {
+.Accordion ul li:nth-child(7) {
   background-image: url("./images/7.jpg");
 }
-.Accordion li div {
+.Accordion ul li div {
   display: block;
   overflow: hidden;
   width: 100%;
 }
-.Accordion li div a {
+.Accordion ul li div a {
   display: block;
+  width: 100%;
+  position: relative;
+  text-decoration: none;
+  color: #fff;
   box-sizing: border-box;
-  height: 250px;
-  padding: 10px 15px;
+  height: 550px;
+  padding: 23px 30px;
+}
+.Accordion ul li div a * {
+  opacity: 0;
+  margin: 0;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  transform: translateX(-20px);
+  transition: all 400ms ease;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.Accordion ul li div a h2 {
+  font-size: 24px;
+  margin-bottom: 2px;
+  top: 460px;
+  text-overflow: clip;
+  text-transform: uppercase;
+}
+.Accordion ul li div a p {
+  top: 460px;
+  font-size: 13.5px;
 }
 
 /*# sourceMappingURL=index.css.map */

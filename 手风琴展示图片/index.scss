@@ -12,7 +12,7 @@ h1 {
 .Accordion {
   width: 85%;
   max-width: 1080px;
-  height: 250px;
+  height: 550px;
   margin: 50px auto;
   // 溢出隐藏
   overflow: hidden;
@@ -28,7 +28,7 @@ h1 {
     // 当鼠标移至某一li时 其他li的宽度
     &:hover li,
     &:focus-within li {
-      width: 12%;
+      width: 6%;
     }
 
     // 当鼠标移至li时 li的宽度
@@ -38,34 +38,74 @@ h1 {
       width: 72%;
     }
 
-  }
+    li {
+      // 设置图片横向
+      display: table-cell;
+      height: 550px;
+      background: center center;
+      vertical-align: bottom;
+      position: relative;
 
-  li {
-    // 设置图片横向
-    display: table-cell;
-    height: 250px;
-    background: center center;
-    // 展示图片
-    @each $c in $img {
-      $i: index($img, $c);
-      &:nth-child(#{$i}) {
-        background-image: url($c);
+
+      // 展示图片
+      @each $c in $img {
+        $i: index($img, $c);
+        &:nth-child(#{$i}) {
+          background-image: url($c);
+        }
       }
-    }
 
-    div {
-      display: block;
-      overflow: hidden;
-      width: 100%;
-
-      a {
+      div {
         display: block;
-        // 设定在元素的指定高度内设定其他值 如下就是只在250高度下做操作
-        box-sizing: border-box;
-        height: 250px;
-        padding: 10px 15px;
+        overflow: hidden;
+        width: 100%;
 
+        a {
+          display: block;
+          width: 100%;
+          position: relative;
+          text-decoration: none;
+          color: #fff;
+          // 设定在元素的指定高度内设定其他值 如下就是只在550高度下做操作
+          box-sizing: border-box;
+          height: 550px;
+          padding: 23px 30px;
+
+          * {
+            opacity: 0;
+            margin: 0;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            transform: translateX(-20px);
+            transition: all 400ms ease;
+            // 文本溢出时省略显示
+            text-overflow: ellipsis;
+            // 段落文本不换行
+            white-space: nowrap;
+          }
+
+          h2 {
+
+            font-size: 24px;
+            margin-bottom: 2px;
+            top: 460px;
+            // 文本溢出裁剪 不忽略
+            text-overflow: clip;
+            // 文本大写
+            text-transform: uppercase;
+          }
+
+          p {
+            top: 460px;
+            font-size: 13.5px;
+          }
+
+
+        }
       }
     }
   }
+
+
 }
